@@ -8,14 +8,14 @@
 .produtos{
     display: flex;
     align-items: center;
-    
     flex-direction: column;
-    margin-right: 50px;
+    padding: 25px';
     padding-bottom: 40px;
     border-bottom:  solid 3px #B00037;
-  
+    margin: auto;
     margin-bottom: 80px;
     width: 80%;
+
 }
 .nome-img{
     display: flex;
