@@ -6,17 +6,22 @@ let pricefinal = document.getElementById("finalprice");
 let carrinho = []
 
 
-let total = JSON.parse(localStorage.getItem("priceShop"))  || [];
-let soma = 0;
-let j = 0;
-let price = []
+
+if(carrinho.length == 0){
+    let total = JSON.parse(localStorage.getItem("priceShop"))  || [];
+    let price = [0]
 
 
-total.forEach(item => {
-    price.push(item.price)
+    total.forEach(item => {
+        price.push(item.price)
 
-})
-let subtotal = price.reduce((total,currentElement) => total+= currentElement)
+    })
+    console.log(price);
+    if(price != []){
+        var subtotal = price.reduce((total,currentElement) => total+= currentElement)
+    }
+}
+
 
 
 // for(let i = 1; i<total.length; i++){
@@ -61,25 +66,29 @@ else{
 
 
 
-finalprice.innerHTML = `    
-<h1>resumo do pedido</h1>
+if(carrinho.length != []  ){
+        finalprice.innerHTML = `    
+    <h1>resumo do pedido</h1>
 
-<div class="produtnumber">
-    <h3> ${carrinho.length} produtos</h3>
-    <p>R$ ${parseFloat(subtotal).toFixed(2)}<p>
-</div>
-<h3 id="frete">Frete gratis</h3>
+        <div class="produtnumber">
+            <h3> ${carrinho.length} produtos</h3>
+            <p>R$ ${parseFloat(subtotal).toFixed(2)}<p>
+        </div>
+        <h3 id="frete">Frete gratis</h3>
 
-<div class="total">
-    <h3>total</h3>
-    <p>R$ ${parseFloat(subtotal).toFixed(2)}</p>
-</div>
+        <div class="total">
+            <h3>total</h3>
+            <p>R$ ${parseFloat(subtotal).toFixed(2)}</p>
+        </div>
 
-<a href="/pages/cep/index.html"><button id="continuar">continuar</button></a>
-<div id="limpar">
-    <a href="#" onclick="limpar()" >limpar carrinho</a>
-</div
-`
+        <a href="/pages/cep/index.html"><button id="continuar">continuar</button></a>
+        <div id="limpar">
+            <a href="#" onclick="limpar()" >limpar carrinho</a>
+        </div
+        `
+}else{
+    finalprice.style.display = "none"
+}
 
 
 
