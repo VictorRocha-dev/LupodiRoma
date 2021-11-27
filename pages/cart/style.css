@@ -1,0 +1,118 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+}
+.produtos{
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    margin-right: 50px;
+    padding-bottom: 40px;
+    border-bottom:  solid 3px #B00037;
+  
+    margin-bottom: 80px;
+    width: 80%;
+}
+.nome-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.produtos h1{
+    margin-bottom: 10vh;
+}
+.finalprice{
+    border-radius: 10px;
+    background-color: #EFEFEF;
+    padding: 25px;
+}
+.finalprice h1{
+    margin-bottom: 20px;
+}
+#frete{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    border-bottom: solid 2px #B00037 ;
+    
+}
+.total , .produtnumber{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#continuar{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #B00037;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 20vh;
+   
+}
+
+.xinsunsun{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+ 
+    width: 100%;
+    border: solid 3px #B00037;
+    padding: 20px;
+}
+
+#foto{
+    width: 100px;
+}
+#limpar {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#limpar a {
+    color: #000;
+}
+
+@media (max-width: 999px){
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .produtos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0;
+
+    }
+    .produtnumber{
+        text-align: center;
+    }
+    .produtos h1{
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width: 600px){
+    .xinsunsun{
+
+        gap: 40px;
+    }
+
+}

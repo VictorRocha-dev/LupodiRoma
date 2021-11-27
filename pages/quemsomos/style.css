@@ -1,0 +1,35 @@
+.about-us{
+    max-width: 80%;
+    margin-top: 10vh;
+
+    margin: auto;    
+}
+.about{
+    margin-top: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about p{
+    font-size: 25px;
+    font-family: "Sen" , sans-serif;
+    font-weight: normal;
+    padding: 50px;
+}
+.img{
+    width: 200px;
+}
+
+@media screen and (max-width: 500px) {
+    .about{
+        margin-top: 5vh;
+    }
+    .about p{
+        font-size: 16px;
+        padding: 40px;
+    }
+    .img{
+        width: 150px;
+    }
+}

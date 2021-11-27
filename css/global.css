@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+:root{
+    font-family: "Sen" , sans-serif;
+}
+.title{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   margin-top: 10vh;
+}
+/* esta parte do css é referente ao slogan da empresa */
+
+
+.slogan-container{
+    max-width: 100%;
+    margin: auto;
+    padding: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #00B04D;
+    height: 82vh;
+}
+
+.slogan-content{
+    display: flex;
+
+    justify-content: space-between;
+    flex-direction: column;
+}
+.nossos-servicos{
+    width: 263px;
+    height: 83px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #B00037;
+    color: white;
+    font-size: 20px;
+    margin-top: 20vh;
+    cursor: pointer;
+    text-align: left;
+    padding: 20px;
+    background-image: url('/assets/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+}
+
+.nossos-servicos:hover{
+    transition: 0.5s;
+    background-color: #6E0022;
+}
+
+/* esta parte do css é referente aos top produtos da empresa */
+
+.bestsellers{
+    max-width: 80%;
+    margin: auto;
+    
+    margin-top: 10vh;
+}
+.products{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.geral{
+    width: 250px;
+    height: 50vh;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+}
+.buy{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px  solid  #000;
+    padding-top: 40px;
+}
+
+.buy input{
+    width: 103px;
+    height: 34px;
+    background: #00B04D;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.buy input:hover{
+    transition: .5s;
+    background-color: #B00037;
+}
+
+
+
+
+
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+   background-color: rgba(0, 0, 0, 0.3);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal{
+    background-color: #fff; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px;
+}
+.close{
+    text-align: center;
+}
+.clicks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.additem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #000;
+    margin-top: 100px;
+    gap: 30px;
+    
+}
+.additem button, .close button{
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.addtocart button{
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #B00037;
+    color: white;
+    font-size: 20px;
+    margin-top: 20vh;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.content h1 , h3{
+    text-align: center;
+}
+.addtocart button :hover{
+    transition: 0.5s;
+    background-color: #6E0022;
+
+}
+.art-client {
+    border: 1px solid #6b23a8;
+    border-radius: 10px;
+    padding: 0.8rem;
+    text-align: center;
+    line-height: 2;
+    margin: 0.5rem 0;
+    width: 80%;
+}
+    strong {
+      font-size: 1.5rem;
+      font-family: Sen, sans-serif;
+      color: #000000;
+    }
+    p {
+      font-size: 1rem;
+      font-family: Sen, sans-serif;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+#modal-img{
+    width: 300px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+
+
+
+
+
+@media (max-width: 999px){
+    /* esta parte do css é referente ao slogan da empresa */
+    .mulher-img{
+        display: none;
+    }
+    .slogan{
+        text-align: center;
+
+    }
+    .nossos-servicos{
+        margin: auto;
+        margin-top: 20vh;
+    }
+
+    .products{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    
+    }
+}
+
+@media (max-width: 700px){
+    .products{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .modal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .additem{
+ 
+        margin-top: 50px;
+        
+    }
+    .addtocart button{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    #modal-img{
+        width: 300px;
+        position: relative;
+        top: 2%;
+        transform: translateY(-2%)
+    }
+}
